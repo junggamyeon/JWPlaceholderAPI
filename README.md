@@ -4,7 +4,6 @@ A unified placeholder framework for Endstone servers, completely rewritten in Py
 
 ## 🚀 Features
 - **Built-in Placeholders:** Comes with `%player_...%` and `%server_...%` placeholders out of the box.
-- **Python eCloud:** Download and install community-made expansions directly from the game using python scripts! No shared libraries or compilation required.
 - **Developer API:** Easily create and register your own placeholders within your own Endstone Python plugins.
 - **High Performance:** Async-friendly and optimized string replacement logic.
 
@@ -14,9 +13,6 @@ A unified placeholder framework for Endstone servers, completely rewritten in Py
 | `/papi list` | `papi.admin` | List all registered expansions. |
 | `/papi info <id>` | `papi.admin` | View details about a specific expansion. |
 | `/papi parse <player> <text>` | `papi.admin` | Test placeholders in-game (e.g., `/papi parse Steve %player_name% is cool`). |
-| `/papi ecloud refresh` | `papi.admin` | Fetch the latest expansions from the cloud. |
-| `/papi ecloud list` | `papi.admin` | List all available cloud expansions. |
-| `/papi ecloud download <name>` | `papi.admin` | Download and hot-load an expansion. |
 
 ## 🛠️ Developer API: Creating Your Own Expansion
 
@@ -92,35 +88,6 @@ class MyPlugin(Plugin):
                 self.logger.info("Successfully hooked into JWPlaceholderAPI!")
             except Exception as e:
                 self.logger.warning(f"Failed to hook into JWPlaceholderAPI: {e}")
-```
-
-## ☁️ Creating an eCloud Expansion
-If you want to upload a standalone expansion to the eCloud (so users can download it via `/papi ecloud download`), you just need to create a single `.py` file containing a `papi_create_expansion()` function.
-
-**Example `my_cloud_expansion.py`:**
-```python
-from typing import Optional
-from endstone import Player
-from jwplaceholderapi.expansion import PlaceholderExpansion
-
-class CloudExpansion(PlaceholderExpansion):
-    def get_identifier(self) -> str:
-        return "hello"
-
-    def get_author(self) -> str:
-        return "Author"
-
-    def get_version(self) -> str:
-        return "1.0.0"
-
-    def on_request(self, player: Optional[Player], params: str) -> Optional[str]:
-        if params == "world":
-            return "World!"
-        return None
-
-# REQUIRED: PAPI uses this exact function to load your script
-def papi_create_expansion() -> PlaceholderExpansion:
-    return CloudExpansion()
 ```
 
 ## 📝 Parsing Placeholders in Your Plugin
