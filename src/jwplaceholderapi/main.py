@@ -48,9 +48,8 @@ class PlaceholderAPIPlugin(Plugin):
         self.expansions: Dict[str, PlaceholderExpansion] = {}
         self.ecloud_cache: Dict[str, dict] = {}
         
-        # We simulate the ecloud by using a dummy manifest or python equivalents
-        self.kCloudManifestUrl = "https://raw.githubusercontent.com/EndstoneMC/PlaceholderAPI-python/main/manifest.json" 
-        # (This URL may not exist but mimics the C++ behavior)
+        # Lấy danh sách expansions từ repo GitHub của bạn
+        self.kCloudManifestUrl = "https://raw.githubusercontent.com/junggamyeon/JWPlaceholderAPI/main/manifest.json" 
         
         self.expansions_dir = os.path.join(self.data_folder, "expansions")
         if not os.path.exists(self.expansions_dir):

@@ -1,0 +1,13 @@
+{
+  "jweco": {
+    "author": "JWDev",
+    "description": "Economy placeholders for JWEconomy",
+    "latest_version": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "url": "https://raw.githubusercontent.com/junggamyeon/JWEconomy/main/src/jweconomy/jweconomy_expansion.py"
+      }
+    ]
+  }
+}
