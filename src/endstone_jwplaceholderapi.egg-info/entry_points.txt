@@ -1,2 +1,0 @@
-[endstone]
-jwplaceholderapi = placeholder_api.main:PlaceholderAPIPlugin
