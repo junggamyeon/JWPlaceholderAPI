@@ -10,10 +10,10 @@ from endstone.command import Command, CommandSender
 from endstone.event import event_handler, EventPriority, PlayerQuitEvent
 from endstone import Player
 
-from placeholder_api.expansion import PlaceholderExpansion
-from placeholder_api.replacer import replace_placeholders, contains_delimiters
-from placeholder_api.builtin.player_expansion import PlayerExpansion
-from placeholder_api.builtin.server_expansion import ServerExpansion
+from jwplaceholderapi.expansion import PlaceholderExpansion
+from jwplaceholderapi.replacer import replace_placeholders, contains_delimiters
+from jwplaceholderapi.builtin.player_expansion import PlayerExpansion
+from jwplaceholderapi.builtin.server_expansion import ServerExpansion
 
 class PlaceholderAPIPlugin(Plugin):
     api_version = "0.11"

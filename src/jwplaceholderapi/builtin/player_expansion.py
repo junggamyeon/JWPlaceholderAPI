@@ -1,6 +1,6 @@
 from typing import Optional
 from endstone import Player, GameMode
-from placeholder_api.expansion import PlaceholderExpansion
+from jwplaceholderapi.expansion import PlaceholderExpansion
 
 class PlayerExpansion(PlaceholderExpansion):
     def get_identifier(self) -> str:

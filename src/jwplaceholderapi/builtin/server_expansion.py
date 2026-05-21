@@ -1,6 +1,6 @@
 from typing import Optional
 from endstone import Player, Server
-from placeholder_api.expansion import PlaceholderExpansion
+from jwplaceholderapi.expansion import PlaceholderExpansion
 
 class ServerExpansion(PlaceholderExpansion):
     def __init__(self, server: Server):
