@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "endstone-placeholderapi"
+name = "endstone-jwplaceholderapi"
 version = "1.0.0"
 description = "Unified placeholder framework for Endstone plugins (Python version)."
 readme = "README.md"
@@ -13,7 +13,7 @@ requires-python = ">=3.12"
 dependencies = ["endstone>=0.11.3"]
 
 [project.entry-points."endstone"]
-placeholder_api = "placeholder_api.main:PlaceholderAPIPlugin"
+jwplaceholderapi = "placeholder_api.main:PlaceholderAPIPlugin"
 
 [tool.setuptools.packages.find]
 where = ["src"]

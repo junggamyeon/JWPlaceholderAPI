@@ -7,8 +7,7 @@ from typing import Dict, List, Optional, Any
 
 from endstone.plugin import Plugin
 from endstone.command import Command, CommandSender
-from endstone.event import event_handler, EventPriority
-from endstone.event.player import PlayerQuitEvent
+from endstone.event import event_handler, EventPriority, PlayerQuitEvent
 from endstone import Player
 
 from placeholder_api.expansion import PlaceholderExpansion
@@ -17,7 +16,7 @@ from placeholder_api.builtin.player_expansion import PlayerExpansion
 from placeholder_api.builtin.server_expansion import ServerExpansion
 
 class PlaceholderAPIPlugin(Plugin):
-    api_version = "0.12"
+    api_version = "0.11"
     prefix = "PAPI"
     version = "1.0.0"
     description = "Unified placeholder framework for Endstone plugins (Python version)."
@@ -27,7 +26,12 @@ class PlaceholderAPIPlugin(Plugin):
         "papi": {
             "description": "PlaceholderAPI management.",
             "usages": [
-                "/papi <list|info <id>|parse <player> <text...>|ecloud <list|download <name>|refresh>>"
+                "/papi list",
+                "/papi info <id: string>",
+                "/papi parse <player: string> <text: message>",
+                "/papi ecloud list",
+                "/papi ecloud download <name: string>",
+                "/papi ecloud refresh"
             ],
             "permissions": ["papi.admin"],
         }
