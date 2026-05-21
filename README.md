@@ -1,4 +1,4 @@
-# JWPlaceholderAPI (Python)
+# JWPlaceholderAPI
 
 **JWPlaceholderAPI** is a unified placeholder framework for Endstone Minecraft servers, completely rewritten in Python! 
 
@@ -13,6 +13,8 @@ It provides a standardized way for different plugins to share and parse variable
 Simply install the plugin on your server! It works automatically in the background. 
 - **Server Owners:** Look for plugins that mention "PlaceholderAPI support". You can then use any registered placeholders in their config files. You can check available placeholders using `/papi list` in-game.
 - **Developers:** Read the Developer API section below to learn how to parse placeholders in your strings or how to register your own custom placeholders.
+
+- 🌐 Website: https://jw-placeholder-api-page.vercel.app/
 
 ## 🚀 Features
 - **Built-in Placeholders:** Comes with `%player_...%` and `%server_...%` placeholders out of the box.
