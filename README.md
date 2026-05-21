@@ -1,0 +1,2 @@
+# JWPlaceholderAPI
+PlaceholderAPI for endstone
