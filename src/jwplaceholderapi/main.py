@@ -57,14 +57,12 @@ class PlaceholderAPIPlugin(Plugin):
         # server.plugin_manager.get_plugin("PlaceholderAPI-python")
         
         self.register_events(self)
-        self.logger.info("PlaceholderAPI v1.0.0 (Python) enabled.")
 
     def on_disable(self) -> None:
         ids = list(self.expansions.keys())
         for identifier in ids:
             self.unregister_expansion(identifier)
         self.expansions.clear()
-        self.logger.info("PlaceholderAPI disabled.")
 
     def register_expansion(self, expansion: PlaceholderExpansion) -> bool:
         if not expansion:
