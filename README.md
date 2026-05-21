@@ -1,6 +1,18 @@
 # JWPlaceholderAPI (Python)
 
-A unified placeholder framework for Endstone servers, completely rewritten in Python! This plugin allows server owners to use dynamic placeholders across different plugins, and provides a simple API for developers to register their own custom placeholders.
+**JWPlaceholderAPI** is a unified placeholder framework for Endstone Minecraft servers, completely rewritten in Python! 
+
+### What does it do?
+It provides a standardized way for different plugins to share and parse variables (placeholders). Instead of every plugin implementing its own variable system (like replacing `%player%` or `{name}` in config files), JWPlaceholderAPI provides a single, central API that parses strings like `%player_name%` and `%server_online%` dynamically.
+
+### Why is it useful?
+- **For Server Owners:** You can use placeholders from one plugin (e.g., JWEconomy's `%jweco_balance%`) inside another plugin's configuration (e.g., JWBossScore's scoreboard lines). This makes your server deeply interconnected and customizable.
+- **For Developers:** You no longer need to write custom logic to fetch another plugin's data. You just hook into JWPlaceholderAPI, and instantly your plugin can support hundreds of placeholders from other plugins. You can also expose your own plugin's data to the rest of the server easily.
+
+### How to use it?
+Simply install the plugin on your server! It works automatically in the background. 
+- **Server Owners:** Look for plugins that mention "PlaceholderAPI support". You can then use any registered placeholders in their config files. You can check available placeholders using `/papi list` in-game.
+- **Developers:** Read the Developer API section below to learn how to parse placeholders in your strings or how to register your own custom placeholders.
 
 ## 🚀 Features
 - **Built-in Placeholders:** Comes with `%player_...%` and `%server_...%` placeholders out of the box.
@@ -10,9 +22,9 @@ A unified placeholder framework for Endstone servers, completely rewritten in Py
 ## 💻 Commands & Permissions
 | Command | Permission | Description |
 |---|---|---|
-| `/papi list` | `papi.admin` | List all registered expansions. |
-| `/papi info <id>` | `papi.admin` | View details about a specific expansion. |
-| `/papi parse <player> <text>` | `papi.admin` | Test placeholders in-game (e.g., `/papi parse Steve %player_name% is cool`). |
+| `/papi list` | `jwplaceholderapi.admin` | List all registered expansions. |
+| `/papi info <id>` | `jwplaceholderapi.admin` | View details about a specific expansion. |
+| `/papi parse <player> <text>` | `jwplaceholderapi.admin` | Test placeholders in-game (e.g., `/papi parse Steve %player_name% is cool`). |
 
 ## 🛠️ Developer API: Creating Your Own Expansion
 

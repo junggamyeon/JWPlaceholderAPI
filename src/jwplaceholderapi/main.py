@@ -26,12 +26,12 @@ class PlaceholderAPIPlugin(Plugin):
                 "/papi info <id: string>",
                 "/papi parse <player: string> <text: message>"
             ],
-            "permissions": ["papi.admin"],
+            "permissions": ["jwplaceholderapi.admin"],
         }
     }
 
     permissions = {
-        "papi.admin": {
+        "jwplaceholderapi.admin": {
             "description": "Access to /papi commands.",
             "default": "op",
         }
