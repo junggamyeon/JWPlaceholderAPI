@@ -1,8 +1,4 @@
 import os
-import importlib
-import urllib.request
-import urllib.error
-import json
 from typing import Dict, List, Optional, Any
 
 from endstone.plugin import Plugin
