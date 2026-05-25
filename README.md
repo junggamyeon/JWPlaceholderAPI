@@ -33,7 +33,7 @@ Simply install the plugin on your server! It works automatically in the backgrou
 If you are a plugin developer, you can hook into JWPlaceholderAPI to provide your own placeholders!
 
 ### 1. Add `jwplaceholderapi` as a dependency
-In your plugin's `pyproject.toml` or `plugin.yml`, add `jwplaceholderapi` as a `depend` or `soft_depend`.
+In your plugin's `main.py`, add `jwplaceholderapi` as a `depend` or `soft_depend`.
 
 ### 2. Create an Expansion Class
 Create a class that inherits from `PlaceholderExpansion`. You can safely fallback to `object` if you only use JWPlaceholderAPI as a soft-dependency.
